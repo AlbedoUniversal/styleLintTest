@@ -1,0 +1,48 @@
+@import './index';
+
+.header {
+  padding: 10px;
+
+  background-color: rgb(76, 148, 148);
+  &-wrapper {
+    @include wrapper();
+    background-color: rgb(189, 155, 115);
+    .menu {
+      @include row-flex();
+      justify-content: space-between;
+      &-list {
+        @include size(6);
+        display: flex;
+        &__item {
+          list-style-type: none;
+          padding-left: 35px;
+          &Link {
+            color: green;
+            text-decoration: none;
+          }
+        }
+      }
+      &-contacts {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include size(6);
+        &__tel {
+          text-decoration: none;
+        }
+        &__btn {
+          background: #ff6108;
+          border-radius: 20px;
+          border: none;
+          margin-left: 69px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: rem(32px);
+          line-height: 38px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
